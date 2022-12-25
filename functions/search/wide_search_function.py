@@ -24,8 +24,8 @@ def wide_search_function(name):
         person = search_queue.popleft()
         if not person in searched:
             if person_is_seller(person):
-                print(person + " is a mango seller")
-                return True
+                result = person + " is a mango seller"
+                return True, result
             else:
                 search_queue += graph[person]
                 searched.append(person)
